@@ -67,7 +67,7 @@ Commentaire sur plusieurs lignes
 					<h3>Déclaration d’un fichier Javascript</h3>
 					<pre><code>
 <script src="js/script.js"></script>
-// NB: Dans le <head> ou en bas de page en fonction des cas
+// NB: Dans le < head> ou en bas de page en fonction des cas
 					</code></pre>
 					<pre><code>
 <script type="text/javascript">
@@ -334,14 +334,88 @@ De nombreux évènements sont accessibles, tels que :
 					</section>
 				</section>
 				<section>
-					<h3>Exercices appliqués</h3>
-					<a href="https://codepen.io/AdrienSkoove/pen/WNeKdQG?editors=1010">Accédez au CodePen</a> ou <a href="exercices.html">directement au fichier local</a>
+					<section>
+					<h3>Codes utiles pour les exercices</h3>
+					</section>
+					<section>
+					<h4>Champs inputs</h4>
+<pre><code>
+// HTML - Champ input
+<input type="text" id="monInputText">
+<input type="Number" id="monInputNumber">
+</code></pre>
+<pre><code>
+// Récupérer la valeur d'un champ input
+document.getElementById("monInput").value
+</code></pre>
+					</section>
+					<section>
+					<h4>Champs inputs range et event oninput</h4>
+<pre><code>
+<form oninput="result.value=parseInt(price_range.value);setHighlight();" >
+	<input type="range" id="price_range" name="price_range" value="50"/>
+	<br><output name="result"></output>€
+</form>
+</code></pre>
+					</section>
+					<section>
+De nombreux évènements sont accessibles, tels que :
+<ul>
+<li>onload - lance une fonction au chargment de la page</li>
+<li>onchange - lance une fonction lorsqu'un utiliseur entre des données dans un champ input</li>
+<li>mousedown / onmouseup - lance une fonction à partir d'un clique</li>
+<li>onkeyup / onkeydown - lance un événement à partir des touches du clavier</li>
+<li>et plus encore ...</li>
+</ul>
+					</section>
 				</section>
 				<section>
-					<h3>Vos questions</h3>
-					<ul>
-						<li></li>
-					</ul>
+					<section>
+					<h3>Arrays / Tableaux</h3>
+<pre><code>
+// Creation d'un tableau et insertion de valeurs
+var team = ['Renée', 'Alex'];
+</code></pre>
+
+<pre><code>
+// Affichage du nombre de valeur dans le tableau
+console.log(team.length);
+</code></pre>
+
+<pre><code>
+// Méthode 1
+team.forEach(function(item, index, array) {
+  console.log(item, index);
+});
+
+// Méthode 2
+for(i=0 ; i < team.lenght; i++){
+	console.log(team[i]);
+}
+</code></pre>
+					</section>
+					<section>
+						<p>Différente opériations peuvent s'appliquer aux tableaux</p>
+<pre><code>
+var newTeamMember = team.push('Fred');
+// ajoute à la "Fred" à la fin du tableau
+</code></pre>
+						<p>Vous avez aussi :</p>
+						<ul>
+							<li>pop('...') - qui supprime le dernier item du tableau</li>
+							<li>shift('...') - qui supprime le premier item du tableau</li>
+							<li>unshift('...') - qui ajoute un item au début du tableau</li>
+							<li>indexOf('valeurRecherchée') - qui récupère la position de la valeur définis en paramètre</li>
+							<li>splice(pos, 1); - supprime "1" item sur une position prédéfinis "pos"</li>
+						</ul>
+					</section>
+
+
+					<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array">Ressource</a>
+				</section>
+				<section>
+					<h3>Exercices appliqués</h3>
+					<a href="https://codepen.io/AdrienSkoove/pen/WNeKdQG?editors=1010">Accédez au CodePen</a> ou <a href="exercices.html">directement au fichier local</a>
 				</section>
 			</div>
 		</div>

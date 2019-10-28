@@ -2,15 +2,26 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>TD MMI2 S3 Javascript - Exercice</title>
+    <title>TD MMI2 S3 Javascript - Exercices</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
-  <body>
+  <body onload="chanrgement()">
     <section class="container">
-      <h1>TD MMI2 S3 Javascript - Exercice <br>https://codepen.io/AdrienSkoove/pen/WNeKdQG</h1>
-
+      <h1>TD MMI2 S3 Javascript - Exercices</h1>
+      <h2>https://codepen.io/AdrienSkoove/pen/WNeKdQG</h2>
+      <hr>
       <h3>Exercice 1.1</h3>
       <p>Créer un bouton executant une fonction additionnant deux nombres. Afficher ensuite le résultat.</p>
+      <p>
+        <button onclick="Add()">Additionne</button><br>
+        Resultat : <span id="result-exo-1-1"></span>
+      </p>
+      
+      <input id="input-test" placeholder="champ input" type="text"/>
+      
+      <button onclick="Display()">Affiche</button>
+      
+      Resultat : <span id="result-test"></span>
       
       <h3>Exercice 1.2</h3>
       <p>Créer un bouton executant une fonction qui multiplie deux nombres. Afficher ensuite le résultat.</p>
@@ -126,12 +137,12 @@
 <p>Créer une fonction permettant de détecter la largeur disponible sur votre écran - Afficher ensuite le résultat. Intégrer une nouvelle fonction qui vous affichera dynamiquement la résolution de votre page lorsque vous changer manuelement ses proportions.</p>
       
       <h3>Exercice 14: Offres </h3>
-<p></p>
+      <p>Demmander l'exemple au tableau. Mots clefs: Input Range
       
       <h3>Exercice 15</h3>
-<p>À partir d'un champ input, vérifier si votre nombre est un multiple de 3 et/ou de 7. Retourner un résultat: "Est un multiple de 3" / "Est un multiple de 7" / "N'est pas un multple de 3 ou 7"</p>
+      <p>À partir d'un champ input, vérifier si votre nombre est un multiple de 3 et/ou de 7. Retourner un résultat: "Est un multiple de 3" / "Est un multiple de 7" / "N'est pas un multple de 3 ou 7"</p>
       
-    <h3>Exercice 9 - Mini Jeu, plus ou moins?</h3>
+    <h3>Exercice 16 - Mini Jeu, plus ou moins?</h3>
       <p>Développer un script dans lequel votre utilisateur doit deviner un nombre entre 1 et 100. Étapes:</p>
       <ul>
         Générer un nombre aléatoire
@@ -146,24 +157,25 @@
        Définir une une condition (if) . Si le nombre inséré par votre utilisateur est plus grand > Afficher un message ("Nombre trop grand"). Si votre nombre est top petit > Afficher un messager ("Nombre trop petit"). Et si votre nombre correspond au nombre aléatoire > Afficher un message de succès.
       </ul>
       
-      <h3>Exercice 10 - Les Conversions</h3>
-      <h5>10.1 - Conversion de degrés en Fahrenheit.</h5>
+      <h3>Exercice 17 - Les Conversions</h3>
+      <h5>17.1 - Conversion de degrés en Fahrenheit.</h5>
       <p>Créer un champs input, ainsi qu'un bouton permettant de convertir un nombre entier de degrés en Farhenheit.</p>
-      <h5>10.2 - Conversion d'euros en Dolar.</h5>
+      <h5>17.2 - Conversion d'euros en Dolar.</h5>
       <p>Créer un champs input, ainsi qu'un bouton permettant de convertir l'Euros en Dollar.</p>
-      <h5>10.3 - Conversion de pounds en euros.</h5>
+      <h5>17.3 - Conversion de pounds en euros.</h5>
       <p>Créer un champs input, ainsi qu'un bouton permettant de convertir des Pounds en Euros.</p>  
-  <hr>
-      </h3>Tableau</h3>
-      <h3>Exercice</h3>
-  <p>Créer un tableau de données comportant une liste de prénoms. Exemple: Julie, Cedric, Jean-Marc, ... 
-  <ul>
-    <li>Ajouter un bouton vous permettant d'afficher le premier prénom du tableau.</li>
-    <li>Ajouter un bouton vous permettant d'afficher tous les prénoms.</li>
-    <li>Ajouter un bouton vous permettant d'afficher le dernier resultat du tableau.</li>
-    <li>Créer une instance (une copie) du tableau et y ajouter Céline à la fin du tableau et afficher l'ensemble des résultats.</li>
-    <li>Créer un nouvelle instance du tableau et supprimer Cedric et Jean-Marc (les positions 1 et 2). Intégrer ensuite un bouton vous permetant d'afficher le résultat sur votre navigateur.</li>
-  </ul></p>
+      <hr>
+      <h3>Exercice 18 - Tableau</h3>
+      <p>Créer un tableau de données comportant une liste de prénoms. Exemple: Julie, Cedric, Jean-Marc, ... 
+      <ul>
+        <li>Ajouter un bouton vous permettant d'afficher le premier prénom du tableau.</li>
+        <li>Ajouter un bouton vous permettant d'afficher tous les prénoms.</li>
+        <li>Ajouter un bouton vous permettant d'afficher le dernier resultat du tableau.</li>
+        <li>Créer une instance (une copie) du tableau et y ajouter Céline à la fin du tableau et afficher l'ensemble des résultats.</li>
+        <li>Créer un nouvelle instance du tableau et supprimer Cedric et Jean-Marc (les positions 1 et 2). Intégrer ensuite un bouton vous permetant d'afficher le résultat sur votre navigateur.</li>
+      </ul></p>
+
+
     </section>
   </body>
-</html>     
+</html>
