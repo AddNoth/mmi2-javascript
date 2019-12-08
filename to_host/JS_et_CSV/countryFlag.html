@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Country selector by CSV</title>
+    <script src="d3.min.js"></script>
+</head>
+<body>
+    <h1>Search for a country flag</h1>
+    <input type="text" name="inputCountry" id="inputCountry" placeholder="Enter Country name" value="France">
+    <button onclick="getCountryFlag();">Submit</button>
+    <p>Find a flag out of those <span id="numberOfCountries"></span> countries</br>
+    <small id="countryList"></small></br>
+    <div id="flagPicture"></div>
+    <span style='color:red'><br>If the page doesn't load any results. <br><small>Keep in mind that you need to run the file into a local environement. Example: http://localhost:8888/Tools/CSV_Parser/countryFlag.html</small><br><br>If no results found. <br><small>Please check spelling mistakes and if the 1st letter of the country is a capital letter.</small></span>
+    </p>
+    <script type="text/javascript" charset="utf-8">
+        /*** Variables ***/
+        var countryTable = [];
+        var row_number = 0;
+
+        /*** Fill JS array with CSV file ***/
+        d3.csv("Country_Flags.csv", function(data) {
+            data.forEach(function(d) {
+                countryTable.push({
+                    country: data[row_number].Country,
+                    imageURL: data[row_number].ImageURL,
+                });
+                document.getElementById('countryList').innerHTML += data[row_number].Country +" | ";
+                document.getElementById('numberOfCountries').innerHTML = row_number;
+                row_number++;
+            });
+        });
+
+        /*** Get the match ***/
+        function getCountryFlag(){
+          var getCountry = document.getElementById("inputCountry").value;
+            for (var i = 0; i <= row_number; i++) {
+                if (countryTable[i].country === getCountry) {
+                    document.getElementById('flagPicture').innerHTML = "<img src='" + countryTable[i].imageURL + "'/>";
+                }
+                // else{
+                //   document.getElementById('flagPicture').innerHTML = "<span style='color:red'><br>No results found. <br><small>Please check spelling mistakes and if the 1st letter of the country is a capital letter.</small></span>";
+                // };
+            };
+        }
+
+        /*** Hotkey on the RETURN ***/
+        document.addEventListener('keypress', function (e) {
+            var key = e.which || e.keyCode;
+            if (key === 13) { // 13 is enter
+              getCountryFlag();
+            }
+        });
+    </script>
+</body>
+</html>
